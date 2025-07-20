@@ -1,27 +1,27 @@
 {
     "AOI":{
-        "north": 46,
-        "south": 44,
-        "west": 6,
-        "est": 8
+        "north": 37.3,
+        "south": 36.7,
+        "west": 38.6,
+        "est": 39.3
     },
-    "general_path": "E:\\TEMP\\",
-    "senet_folder": "C:\\Users\\stucchi\\.snap\\auxdata\\sen-et-conda-Win64",
+    "general_path": "E:\\senet_temp",
+    "senet_folder": "C:\\Users\\Misafir\\.snap\\auxdata\\sen-et-conda-Win64",
     "comp_parameters":{
         "ecwf_data":{
             "time_zone": 2
         },
         "frac_green":{
-            "min_frac_green": 0.2
+            "min_frac_green": 0.3
         },
         "aerodynamic_roughness":{
-            "soil_roughness": 0.01
+            "soil_roughness": 0.05
         },
         "warp":{
             "algorithm": "near"
         },
         "data_mining":{
-            "cv_homogeneity_threshold": 0.0,
+            "cv_homogeneity_threshold": 0.1,
             "moving_window_size": 30,
             "parallel_jobs": 2
         },
@@ -30,7 +30,7 @@
             "soil_ref_nir": 0.25
         },
         "energy_fluxes":{
-            "soil_roughness": 0.01,
+            "soil_roughness": 0.05,
             "alpha_pt": 1.28,
             "green_vegetation_emissivity": 0.99,
             "soil_emissivity": 0.97
