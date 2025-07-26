@@ -10,7 +10,7 @@ def is_valid_date(input_date):
     except ValueError:
         return False
 
-path_param = "input\\parameters.json"
+path_param = "C:/Users/Misafir/Documents/GitHub/SEN-ET_automatization/input/parameters.json"
 
 with open(path_param, "r") as f:
     param = json.load(f)
@@ -20,7 +20,7 @@ general_path = param["general_path"]
 sub_folders = [name for name in os.listdir(general_path) if os.path.isdir(os.path.join(general_path, name))]
 
 for folder in sub_folders:
-    temp_path = general_path + folder
+    temp_path = general_path + "/" + folder
     if folder == "S2":
         list_s2_days = [temp_path + "\\" + name for name in os.listdir(temp_path) if os.path.isdir(os.path.join(temp_path, name))]
         valid_s2_days = [day for day in list_s2_days if is_valid_date(day.split("\\")[-1])]
@@ -34,13 +34,13 @@ for folder in sub_folders:
         list_s3_images = [item for sublist in list_s3_images for item in sublist]
         valid_list_s3_images = [imm for imm in list_s3_images if imm[-5:] == ".SEN3"]
 
-s2_paths = "input/s2_paths.txt"
+s2_paths = "C:/Users/Misafir/Documents/GitHub/SEN-ET_automatization/input/s2_paths.txt"
 f_s2_paths = open(s2_paths, "w")
 for element in valid_list_s2_images:
     f_s2_paths.write(element + "\n")
 f_s2_paths.close()
 
-s3_paths = "input/s3_paths.txt"
+s3_paths = "C:/Users/Misafir/Documents/GitHub/SEN-ET_automatization/input/s3_paths.txt"
 f_s3_paths = open(s3_paths, "w")
 for element in valid_list_s3_images:
     f_s3_paths.write(element + "\n")

@@ -1,17 +1,17 @@
 import os
 import json
-path_param = "input\\parameters.json"
-path_file_path_s2 = "input\\s2_paths.txt"
-path_file_path_s3 = "input\\s3_paths.txt"
-path_s2_pro = "graph\\sentinel_2_pre_processing.xml"
-path_LC = "graph\\add_landcover.xml"
-path_ele = "graph\\add_elevation.xml"
-path_s3_pro = "graph\\sentinel_3_pre_processing.xml"
-path_graph = "output\\graph\\"
-path_date_s2 = "output\\days_s2.txt"
-path_date_s3 = "output\\days_s3.txt"
-path_script_s3 = "output\\1_script_gpt_s3.sh"
-path_script_s2 = "output\\2_script_gpt_s2.sh"
+path_param = "C:/Users/Misafir/Documents/GitHub/SEN-ET_automatization/input/parameters.json"
+path_file_path_s2 = "C:/Users/Misafir/Documents/GitHub/SEN-ET_automatization/input/s2_paths.txt"
+path_file_path_s3 = "C:/Users/Misafir/Documents/GitHub/SEN-ET_automatization/input/s3_paths.txt"
+path_s2_pro = "D:/ITU Master/Master thesis/My Dataset/Sen-ET/Sen-et set-up/SNAP Graphs/sentinel_2_pre_processing.xml"
+path_LC = "D:/ITU Master/Master thesis/My Dataset/Sen-ET/Sen-et set-up/SNAP Graphs/add_landcover.xml"
+path_ele = "D:/ITU Master/Master thesis/My Dataset/Sen-ET/Sen-et set-up/SNAP Graphs/add_elevation.xml"
+path_s3_pro = "D:/ITU Master/Master thesis/My Dataset/Sen-ET/Sen-et set-up/SNAP Graphs/sentinel_3_pre_processing.xml"
+path_graph = "D:\ITU Master\Master thesis\My Dataset\Sen-ET\MAIN FOLDER OUTPUT/graph"
+path_date_s2 = "D:\ITU Master\Master thesis\My Dataset\Sen-ET\MAIN FOLDER OUTPUT/graph/days_s2.txt"
+path_date_s3 = "D:\ITU Master\Master thesis\My Dataset\Sen-ET\MAIN FOLDER OUTPUT/graph/days__s3.txt"
+path_script_s3 = "D:\ITU Master\Master thesis\My Dataset\Sen-ET\MAIN FOLDER OUTPUT/1_script_gpt_s3.sh"
+path_script_s2 = "D:\ITU Master\Master thesis\My Dataset\Sen-ET\MAIN FOLDER OUTPUT/2_script_gpt_s2.sh"
 
 # Create directory
 if os.path.isdir("output") == False:
@@ -66,7 +66,7 @@ for line in file_path_s3:
     f.close()
 file_path_s3.close()
 
-script_text = script_text.replace("\\", "\\\\")
+#script_text = script_text.replace("\\", "\\\\")
 
 f = open(path_date_s3, "w")
 f.write(date_s3)
